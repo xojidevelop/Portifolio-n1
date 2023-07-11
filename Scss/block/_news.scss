@@ -1,0 +1,58 @@
+.news__info {
+    font-size: 50px;
+    line-height: 61px;
+    color: $dark;
+}
+
+.news__info::before {
+    content: "ЧТО";
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark;
+}
+
+.news__list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news__item-span {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(148, 137, 137);
+    display: flex;
+    align-items: center;
+}
+
+.news__item-span::before {
+    content: url(/img/Base.svg);
+    opacity: 0.5;
+}
+
+.news__item-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark;
+    max-width: 340px;
+}
+
+.news__item-link {
+    @include reset-link;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #06A39C;
+    display: flex;
+    align-items: center;
+}
+
+.news__item-link::after {
+    content: url(/img/Arrow.svg);
+}

@@ -1,0 +1,89 @@
+.partner__wrap {
+    text-align: center;
+}
+
+.partner__info {
+    text-align: left;
+}
+
+.partner__info-title {
+    font-size: 50px;
+    line-height: 61px;
+    color: $dark;
+}
+
+.partner__info-title::before {
+    margin-top: 100px;
+    content: "МЫ";
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark;
+}
+
+.partner__info-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark;
+    opacity: 0.8;
+    max-width: 582px;
+}
+
+.partner__list {
+    margin-top: 75px;
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.partner__list-item {
+    margin: 15px 0;
+}
+
+.partner__point-list {
+    margin-bottom: 65px;
+    text-align: center;
+    width: 35px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner__point:nth-child(1) {
+    opacity: 0.5;
+}
+
+.partner__point:nth-child(3) {
+    opacity: 0.5;
+}
+
+.partner__point {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #06A39C;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.partner__link {
+    @include reset-link;
+    padding: 13px 28px;
+    background-color: $dark;
+    color: $white;
+}
+
+@include breakpoint-down(380px) {
+    .partner__info-title {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .partner__info-title::before {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

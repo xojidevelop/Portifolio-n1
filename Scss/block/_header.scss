@@ -1,0 +1,61 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 0;
+}
+.nav__list{
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__list li{
+    margin: 15px;
+}
+.nav__list-item{
+    @include reset-link;
+}
+.nav__list-item-tel{
+    display: flex;
+}
+.nav__list-item-tel::before{
+    content: url(/img/phone-call.svg);
+}
+.nav__list-item-tel a{
+    color: $dark;
+    font-weight: bold
+}
+
+.nav__list-item-btn{
+    @include site-btn;
+}
+.nav__list-item-btn a{
+    color: $white;
+}
+
+.nav__list-item-en{
+    padding: 0 15px;
+    height: 25px;
+    border-left: 3px solid $dark;
+}
+.nav__list-item-en::after{
+    content: url(/img/bottom.svg);
+}
+
+.nav__list-item-menu::after{
+ content: url(/img/gamburger.svg);
+}
+
+
+@include breakpoint-down(750px){
+    .nav__list-item-tel{
+        display: none;
+    }
+    .nav__list-item-en{
+        display: none;
+    }
+    .nav__list-item-btn{
+        display: none;
+    }
+}
